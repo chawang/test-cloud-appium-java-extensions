@@ -1,6 +1,6 @@
-package com.xamarin.testcloud.appium;
+package com.xamarin.testcloud.event;
 
-enum EventType {
+public enum EventType {
     succeeded,
     label,
     failed,

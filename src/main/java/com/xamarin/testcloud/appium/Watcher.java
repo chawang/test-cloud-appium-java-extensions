@@ -1,5 +1,7 @@
 package com.xamarin.testcloud.appium;
 
+import com.xamarin.testcloud.event.EventReporter;
+import com.xamarin.testcloud.event.EventType;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 

@@ -1,4 +1,7 @@
-package com.xamarin.testcloud.appium;
+package com.xamarin.testcloud.event;
+
+import com.xamarin.testcloud.event.Event;
+import com.xamarin.testcloud.event.EventReporter;
 
 import java.io.IOException;
 import java.util.ArrayList;

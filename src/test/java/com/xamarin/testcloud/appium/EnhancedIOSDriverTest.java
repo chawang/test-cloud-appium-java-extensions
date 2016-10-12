@@ -1,5 +1,6 @@
 package com.xamarin.testcloud.appium;
 
+import com.xamarin.testcloud.event.MemoryEventReporter;
 import org.junit.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;

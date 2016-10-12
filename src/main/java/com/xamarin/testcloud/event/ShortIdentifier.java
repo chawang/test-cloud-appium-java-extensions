@@ -1,4 +1,4 @@
-package com.xamarin.testcloud.appium;
+package com.xamarin.testcloud.event;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -52,7 +52,6 @@ class ShortIdentifier {
             byte[] shortened = shortenHash(calcSha1(input), 64);
             char[] radix61 = new BigInteger(shortened).abs().toString(Character.MAX_RADIX).toCharArray();
             return new String(radix61);
-//              return new BigInteger(shortened).abs().toString(39);
 
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);

@@ -1,6 +1,6 @@
-package com.xamarin.testcloud.appium;
+package com.xamarin.testcloud.event;
 
-class Event {
+public class Event {
 
     Event(String id, EventType type, String testName, String className, int run) {
         this.id = id;

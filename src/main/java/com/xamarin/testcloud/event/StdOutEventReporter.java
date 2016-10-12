@@ -1,10 +1,8 @@
-package com.xamarin.testcloud.appium;
+package com.xamarin.testcloud.event;
 
 import java.io.IOException;
 
-import static com.xamarin.testcloud.appium.EventType.*;
-
-class StdOutEventReporter extends EventReporter {
+public class StdOutEventReporter extends EventReporter {
 
     @Override
     protected void commit(Event event) throws IOException {

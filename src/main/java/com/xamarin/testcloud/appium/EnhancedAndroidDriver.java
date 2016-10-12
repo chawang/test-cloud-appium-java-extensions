@@ -1,5 +1,6 @@
 package com.xamarin.testcloud.appium;
 
+import com.xamarin.testcloud.event.EventReporter;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.*;
@@ -7,7 +8,6 @@ import org.openqa.selenium.remote.DriverCommand;
 import org.openqa.selenium.remote.http.HttpClient;
 
 import java.net.URL;
-import java.util.List;
 
 public class EnhancedAndroidDriver<T extends WebElement> extends io.appium.java_client.android.AndroidDriver<WebElement> {
 

@@ -1,4 +1,4 @@
-package com.xamarin.testcloud.appium;
+package com.xamarin.testcloud.event;
 
 import org.junit.runner.Description;
 
@@ -10,7 +10,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-abstract class EventReporter {
+public abstract class EventReporter {
 
     private Set<String> usedIds = new HashSet<>();
     private Description lastDescription = null;
@@ -18,7 +18,7 @@ abstract class EventReporter {
     private int screenshotCounter = 0;
     private final Pattern paramsFinder = Pattern.compile("\\[(.+?)\\]");
 
-    void reportJunit(EventType eventType, Description description, Throwable throwable) {
+    public void reportJunit(EventType eventType, Description description, Throwable throwable) {
         int run = getRun(description);
         lastDescription = description;
 
@@ -55,7 +55,7 @@ abstract class EventReporter {
 
     protected abstract void commit(Event event) throws IOException;
 
-    void reportLabel(String label, String screenshotPath, int screenshotOrientation, boolean screenshotRotated) {
+    public void reportLabel(String label, String screenshotPath, int screenshotOrientation, boolean screenshotRotated) {
         try {
             int run = getRun(lastDescription);
             Event event = Event.createLabel(labelId(), lastDescription.getMethodName(), lastDescription.getClassName(), run, label, screenshotPath, screenshotOrientation, screenshotRotated);
@@ -65,7 +65,7 @@ abstract class EventReporter {
         }
     }
 
-    void reportScreenshot(String screenshotPath, int screenshotOrientation, boolean screenshotRotated) {
+    public void reportScreenshot(String screenshotPath, int screenshotOrientation, boolean screenshotRotated) {
         try {
             int run = getRun(lastDescription);
             Event event = Event.createScreenshot(screenshotId(), lastDescription.getMethodName(), lastDescription.getClassName(), run, screenshotPath, screenshotOrientation, screenshotRotated);

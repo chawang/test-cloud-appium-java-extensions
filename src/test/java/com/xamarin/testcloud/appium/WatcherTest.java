@@ -1,5 +1,6 @@
 package com.xamarin.testcloud.appium;
 
+import com.xamarin.testcloud.event.MemoryEventReporter;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Rule;

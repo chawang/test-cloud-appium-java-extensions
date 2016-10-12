@@ -1,5 +1,7 @@
 package com.xamarin.testcloud.appium;
 
+import com.xamarin.testcloud.event.EventReporter;
+import com.xamarin.testcloud.event.StdOutEventReporter;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.Capabilities;

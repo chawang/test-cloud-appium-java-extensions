@@ -1,4 +1,4 @@
-package com.xamarin.testcloud.appium;
+package com.xamarin.testcloud.event;
 
 import org.junit.Test;
 
